@@ -1,36 +1,53 @@
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { useState } from 'react'
 
-export default function Nav()
-{
-    const[taggleMenu,setTaggelMenu]=useState(false)
-    return(
-        <header className="flex justify-between px-4 bg-sky-300 p-4 text-white font-serif font-bold" >
-            <a href="#">Gowtham A</a>
-           {/* Larage Device*/ } 
-            <nav className="hidden md:block">
-            <ul className="flex  space-x-4 ">
-                <li className=" hover:text-blue-500 cursor-pointer">Home</li>
-                <li className=" hover:text-blue-500 cursor-pointer">About</li>
-                <li className=" hover:text-blue-500 cursor-pointer">Projects</li>
-                <li className=" hover:text-blue-500 cursor-pointer">Contact</li>
-                
-            </ul>
-            </nav>
+export default function Nav() {
+  const [toggleMenu, setToggleMenu] = useState(false)
 
-            {/* Medium Device*/ }
-            {taggleMenu &&<nav className="block md:hidden">
-            <ul className=" flex-col fixed top-10 left-0 bg-gray-500 w-full  justify-center items-center space-y-2 text-center">
-                <li className=" hover:text-blue-500 cursor-pointer  border-white border-b-2">Home</li>
-                <li className=" hover:text-blue-500 cursor-pointer border-white border-b-2">About</li>
-                <li className=" hover:text-blue-500 cursor-pointer border-white border-b-2">Projects</li>
-                <li className=" hover:text-blue-500 cursor-pointer ">Contact</li>
-                
-            </ul>
+  const navItems = [
+    { label: 'Home', href: 'home' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Contact', href: '#contact' },
+  ]
 
-            </nav>}
+  return (
+    <header className="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-serif font-bold fixed top-0 w-full z-50 shadow-md">
+      <a href="#home" className="text-xl">Gowtham A</a>
 
-            <button onClick={()=>{setTaggelMenu(!taggleMenu)}} className='block md:hidden'><Bars3Icon className='text-white font-bold h-5'></Bars3Icon></button>
-        </header>
-    )
+      {/* Large Devices */}
+      <nav className="hidden md:flex space-x-6">
+        {navItems.map((item, index) => (
+          <a
+            key={index}
+            href={item.href}
+            className="hover:text-black transition duration-300"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      {/* Hamburger Menu */}
+      <button onClick={() => setToggleMenu(!toggleMenu)} className="md:hidden">
+        <Bars3Icon className="h-6 w-6 text-white" />
+      </button>
+
+      {/* Mobile Menu */}
+      {toggleMenu && (
+        <nav className="absolute top-16 left-0 w-full bg-gray-800 text-center text-white py-4 space-y-4 md:hidden">
+          {navItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              onClick={() => setToggleMenu(false)}
+              className="block hover:text-blue-400"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      )}
+    </header>
+  )
 }
