@@ -37,7 +37,7 @@ export default function Home() {
       {/* Social Icons */}
 <div className="flex justify-center mt-6 space-x-6 text-2xl">
   <a
-    href="https://www.linkedin.com/in/your-linkedin-id"
+    href="https://www.linkedin.com/in/gowthamabimanyu"
     target="_blank"
     rel="noopener noreferrer"
     className="text-blue-700 hover:text-blue-900 transition-transform hover:scale-110"
@@ -45,13 +45,13 @@ export default function Home() {
     <FaLinkedin />
   </a>
   <a
-    href="mailto:youremail@example.com"
+    href="mailto:gowthamabi1412@gmail.com"
     className="text-red-600 hover:text-red-800 transition-transform hover:scale-110"
   >
     <FaEnvelope />
   </a>
   <a
-    href="https://github.com/your-github-id"
+    href="https://github.com/GowthamAbi"
     target="_blank"
     rel="noopener noreferrer"
     className="text-gray-800 hover:text-black transition-transform hover:scale-110"
@@ -59,7 +59,7 @@ export default function Home() {
     <FaGithub />
   </a>
   <a
-    href="https://twitter.com/your-twitter-id"
+    href="https://twitter.com/GOWUMA2308"
     target="_blank"
     rel="noopener noreferrer"
     className="text-sky-500 hover:text-sky-700 transition-transform hover:scale-110"
