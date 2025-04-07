@@ -11,27 +11,27 @@ export default function Projects() {
     {
       title: 'Finance App',
       image: Finance,
-      link: 'https://your-project-one-link.com',
+      link: 'https://finance-manager-web.netlify.app/',
     },
     {
       title: 'Online Store',
       image: Store,
-      link: 'https://your-project-two-link.com',
+      link: 'https://fake-productstore.netlify.app/',
     },
     {
       title: 'QR Code Generator',
       image: QR,
-      link: 'https://your-project-three-link.com',
+      link: 'https://gowtham-qr.netlify.app/',
     },
     {
         title: 'Landing Page',
         image: Basic,
-        link: 'https://your-project-three-link.com',
+        link: 'https://selftraining.netlify.app/',
       },
       {
         title: 'Income Expense',
         image: IEC,
-        link: 'https://your-project-three-link.com',
+        link: 'https://incomeexpensecalsi.netlify.app/',
       },
   ];
 
