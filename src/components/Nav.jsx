@@ -5,9 +5,10 @@ export default function Nav() {
   const [toggleMenu, setToggleMenu] = useState(false)
 
   const navItems = [
-    { label: 'Home', href: 'home' },
+    { label: 'Home', href: '#home' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Resume', href: '#resume' },
     { label: 'Contact', href: '#contact' },
   ]
 
