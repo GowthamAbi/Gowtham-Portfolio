@@ -1,0 +1,34 @@
+import { Bars3Icon } from '@heroicons/react/24/solid'
+
+export default function Nav()
+{
+    return(
+        <header className="flex justify-between px-4 bg-sky-300 p-4 text-white font-serif font-bold" >
+            <a href="#">Gowtham A</a>
+           {/* Larage Device*/ } 
+            <nav className="hidden md:block">
+            <ul className="flex  space-x-4 ">
+                <li className=" hover:text-blue-500 cursor-pointer">Home</li>
+                <li className=" hover:text-blue-500 cursor-pointer">About</li>
+                <li className=" hover:text-blue-500 cursor-pointer">Projects</li>
+                <li className=" hover:text-blue-500 cursor-pointer">Contact</li>
+                
+            </ul>
+            </nav>
+
+            {/* Medium Device*/ }
+            <nav className="block md:hidden">
+            <ul className=" flex-col fixed top-10 left-0 bg-gray-500 w-full h-1/4 justify-center items-center space-y-2 text-center">
+                <li className=" hover:text-blue-500 cursor-pointer">Home</li>
+                <li className=" hover:text-blue-500 cursor-pointer">About</li>
+                <li className=" hover:text-blue-500 cursor-pointer">Projects</li>
+                <li className=" hover:text-blue-500 cursor-pointer">Contact</li>
+                
+            </ul>
+
+            </nav>
+
+            <button className='block md:hidden'><Bars3Icon className='text-white font-bold h-5'></Bars3Icon></button>
+        </header>
+    )
+}
