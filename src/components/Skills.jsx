@@ -12,7 +12,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-slate-100 py-12">
+    <section id="skills" className="bg-slate-100 py-16">
       <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">My Skills</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-4">
         {skills.map((skill, index) => (

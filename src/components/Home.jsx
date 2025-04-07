@@ -3,9 +3,9 @@ import {  FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 import Gowtham from '../assets/Profile.png';
 
-export default function Hero() {
+export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-slate-100 to-slate-300 px-4">
+    <section id="home" className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-slate-100 to-slate-300 px-4">
       <div className="relative w-64 h-64 flex items-center justify-center">
 
         {/* Indigo Glow Ring */}

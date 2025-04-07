@@ -5,7 +5,7 @@ export default function Nav() {
   const [toggleMenu, setToggleMenu] = useState(false)
 
   const navItems = [
-    { label: 'Home', href: '#hero' },
+    { label: 'Home', href: '#home' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
     { label: 'Resume', href: '#resume' },
@@ -14,7 +14,7 @@ export default function Nav() {
 
   return (
     <header className="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-serif font-bold fixed top-0 w-full z-50 shadow-md">
-      <a href="#hero" className="text-xl">Gowtham A</a>
+      <a href="#home" className="text-xl">Gowtham A</a>
 
       {/* Large Devices */}
       <nav className="hidden md:flex space-x-6">
