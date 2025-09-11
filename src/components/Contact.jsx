@@ -1,9 +1,9 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const form = useRef();
-
+  const[send,setSend]=useState(false)
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -15,6 +15,7 @@ export default function Contact() {
     )
     .then((result) => {
       alert("Message sent successfully!");
+      setSend(false)
       form.current.reset();
     }, (error) => {
       alert("Failed to send message. Please try again later.");
@@ -29,7 +30,7 @@ export default function Contact() {
         <input type="text" name="user_name" placeholder="Your Name" required className="w-full p-3 border rounded-lg" />
         <input type="email" name="user_email" placeholder="Your Email" required className="w-full p-3 border rounded-lg" />
         <textarea name="message" rows="5" placeholder="Your Message" required className="w-full p-3 border rounded-lg"></textarea>
-        <button type="submit" className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
+        <button type="submit" onClick={()=>setSend(true)} className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">{send?"Sending...":"Send Message"}</button>
       </form>
     </section>
   );
