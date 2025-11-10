@@ -8,7 +8,7 @@ export default function Skills() {
     { name: 'JavaScript', icon: <FaJsSquare className="text-yellow-400 text-5xl" /> },
     { name: 'React', icon: <FaReact className="text-blue-400 text-5xl" /> },
     { name: 'Node.js', icon: <FaNodeJs className="text-green-600 text-5xl" /> },
-    { name: 'SQL', icon: <FaDatabase className="text-purple-500 text-5xl" /> },
+    { name: 'MongoDB', icon: <FaDatabase className="text-purple-500 text-5xl" /> },
   ];
 
   return (
@@ -26,5 +26,5 @@ export default function Skills() {
         ))}
       </div>
     </section>
-  );
+  )
 }
