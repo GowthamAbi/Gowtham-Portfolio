@@ -3,7 +3,8 @@ import Store from '../assets/Store.png';
 import QR from '../assets/QR.png';
 import IEC from '../assets/IEC.png';
 import Basic from '../assets/Basic.png';
-
+import Blogs from '../assets/Blogs.png';
+import Inventory from '../assets/Inventory.png';
 
 
 export default function Projects() {
@@ -12,6 +13,16 @@ export default function Projects() {
       title: 'Finance App',
       image: Finance,
       link: 'https://finance-manager-web.netlify.app/',
+    },
+    {
+      title: 'Blogs',
+      image: Blogs,
+      link: 'https://gowthamblogs.netlify.app/',
+    },
+    {
+      title: 'Inventory Management',
+      image: Inventory,
+      link: 'https://cdinventory.netlify.app/',
     },
     {
       title: 'Online Store',
